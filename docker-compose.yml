@@ -13,7 +13,7 @@ services:
     container_name: sample_back
     build: back/
     volumes:
-      - ./back:/app
+      - ./backend:/app
     depends_on:
       - db
     ports:
@@ -21,7 +21,7 @@ services:
 
   front:
     container_name: sample_front
-    build: front/
+    build: frontend/
     command: npm run dev
     volumes:
       - ./front:/app
